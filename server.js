@@ -6,7 +6,7 @@ const cors = require("cors");
 
 const { initSocket } = require("./websocket/socket");
 const gameRoute = require("./routes/game.routes");
-// const path = require('path');
+const path = require('path');
 const { runGameLoop } = require("./services/gameManager.service");
 
 dotenv.config();
@@ -16,14 +16,17 @@ const server = http.createServer(app);
 const io = initSocket(server);
 
 // Middleware
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 const corsOptions = {
   origin: "https://crypto-crash.netlify.app",
   credentials: true
 };
 
 app.use(cors(corsOptions));
-// app.options("*", cors(corsOptions)); 
+
+
 app.use(express.json());
 app.use("/api/v1", gameRoute);
 
