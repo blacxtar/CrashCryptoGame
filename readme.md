@@ -7,13 +7,13 @@ This project implements a **Crypto Crash Game** backend as specified in the assi
 ## 🚀 Live Demo
 
 * **Frontend:** [https://crypto-crash.netlify.app](https://crypto-crash.netlify.app)
-* **Backend API:** Deployed on [Render](https://render.com)
+* **Backend API:** [https://crashcryptogame.onrender.com](https://crashcryptogame.onrender.com)
 
 ---
 
 ## 📁 GitHub Repositories
 
-* **Frontend:** [https://github.com/blacxtar/CryptoCrashFrontend](https://github.com/blacxtar/CryptoCrashFrontend)
+* **Frontend:** [https://github.com/blacxtar/CryptoGameUI](https://github.com/blacxtar/CryptoGameUI)
 * **Backend:** [https://github.com/blacxtar/CrashCryptoGame](https://github.com/blacxtar/CrashCryptoGame)
 
 ---
@@ -119,7 +119,7 @@ wallet: {
 
 | Method | Endpoint                   | Description                    |
 | ------ | -------------------------- | ------------------------------ |
-| POST   | `/api/v1/create-player`    | Create a new player            |
+| POST   | `/api/v1/players`    | Create a new player            |
 | POST   | `/api/v1/bet`              | Place a bet in USD             |
 | POST   | `/api/v1/cashout`          | Cash out before crash          |
 | GET    | `/api/v1/wallet/:playerId` | Get wallet info (crypto + USD) |
@@ -150,19 +150,7 @@ Or manually insert into MongoDB 3–5 player documents with sample BTC/ETH balan
 
 ---
 
-## 📬 Postman Collection
 
-A Postman collection with:
-
-* Bet
-* Cashout
-* Get wallet
-* Round history
-* Create player
-
-...is available in the `/postman/` folder (or can be exported).
-
----
 
 ## 💡 Architecture Summary
 
@@ -175,20 +163,4 @@ A Postman collection with:
 
 ---
 
-## ✅ To-Do Before Submission
 
-* [x] Push frontend & backend to GitHub
-* [x] Create README with full documentation ✅
-* [x] Include Postman or curl commands
-* [x] Sample players created
-* [x] Deployed both frontend (Netlify) and backend (Render)
-
----
-
-## 📝 Submission
-
-Submit both GitHub links (backend and frontend) with the README, sample data, and Postman collection.
-
-Good luck and thank you for reviewing the project!
-
----
