@@ -17,10 +17,13 @@ const io = initSocket(server);
 
 // Middleware
 // app.use(express.static(path.join(__dirname, 'public')));
-app.use(
-  cors({ origin: "https://crypto-crash.netlify.app", credentials: true })
-);
-app.options("*", cors());
+const corsOptions = {
+  origin: "https://crypto-crash.netlify.app",
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+// app.options("*", cors(corsOptions)); 
 app.use(express.json());
 app.use("/api/v1", gameRoute);
 
