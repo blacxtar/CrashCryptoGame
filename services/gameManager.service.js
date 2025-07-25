@@ -29,7 +29,7 @@ async function startNewRound() {
     crashPoint,
     status: 'running'
   });
-  console.log("Created Round:", round);
+  
   const io = getIO()
 
   io.emit('round_start', {
@@ -38,7 +38,6 @@ async function startNewRound() {
     message: `Round ${roundNumber} started!`
   });
 
-  console.log(`🎮 Round ${roundNumber} started. Will crash at ${crashPoint.toFixed(2)}x`);
 
   // Begin multiplier updates every 100ms
   multiplierInterval = setInterval(async () => {
@@ -54,7 +53,7 @@ async function startNewRound() {
         finalMultiplier: crashPoint
       });
 
-      console.log(`💥 Round ${roundNumber} crashed at ${crashPoint.toFixed(2)}x`);
+   
 
       roundNumber += 1;
     } else {
@@ -66,14 +65,14 @@ async function startNewRound() {
 }
 
 function runGameLoop() {
-  console.log(`Saving round ${roundNumber} to DB with status 'running'`);
+ 
 
   startNewRound(); // run first round immediately
 
   // Schedule next round every 10s
   roundInterval = setInterval(() => {
     if (!multiplierInterval) {
-      console.log("Starting new round")
+      
       startNewRound();
     }
   }, 10000);
