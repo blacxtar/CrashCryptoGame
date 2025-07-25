@@ -150,7 +150,23 @@ Or manually insert into MongoDB 3–5 player documents with sample BTC/ETH balan
 
 ---
 
+## 📬 Postman Collection
 
+A Postman collection with:
+
+Bet
+
+Cashout
+
+Get wallet
+
+Round history
+
+Create player
+
+...is available in the /postman/ folder .
+
+---
 
 ## 💡 Architecture Summary
 
