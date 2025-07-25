@@ -16,14 +16,14 @@ const server = http.createServer(app);
 const io = initSocket(server)
 
 // Middleware
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use('/api/v1',gameRoute)
 
 
 // Basic route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'client.html'));
+ res.send("Hi from crashgame api")
 });
 
 // Connect to MongoDB

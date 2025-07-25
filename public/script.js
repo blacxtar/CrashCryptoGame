@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000");
+const socket = io("https://crashcryptogame.onrender.com");
 
 const multiplierEl = document.getElementById("multiplier");
 const statusEl = document.getElementById("status");
